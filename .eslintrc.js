@@ -1,7 +1,8 @@
 module.exports = {
 	env: {
 		browser: true,
-		es6: true
+		es6: true,
+		node: true
 	},
 	extends: "eslint:recommended",
 	parserOptions: {
@@ -80,5 +81,13 @@ module.exports = {
 		"padded-blocks": [2, "never"],
 		"newline-per-chained-call": [2, { ignoreChainWithDepth: 1 }],
 		"no-whitespace-before-property": 2
+	},
+	globals: {
+		require: false,
+		global: false,
+		module: false,
+		describe: false,
+		it: false,
+		beforeEach: false
 	}
 };
